@@ -16,6 +16,7 @@ Imports:
   askpass,
   cli,
   dplyr,
+  gtools,
   nplyr,
   purrr,
   readr,
