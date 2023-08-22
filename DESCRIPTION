@@ -1,0 +1,31 @@
+Package: heRmann
+Title: Convenience functions for the Consumer Experience Analytics (CXA) team at 
+       Memorial Hermann
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Mark",
+           family = "Rieke",
+           role = c("aut", "cre"),
+           email = "markjrieke@gmail.com")
+Description: A collection of functions for reading and wrangling surveys, and 
+             recodes.
+License: MIT + file LICENSE
+URL: https://github.com/markjrieke/heRmann
+BugReports: https://github.com/markjrieke/heRmann/issues
+Imports:
+  askpass,
+  cli,
+  dplyr,
+  nplyr,
+  purrr,
+  readr,
+  rlang,
+  qualtRics,
+  stringr,
+  tidyr
+Suggests:
+  tibble
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
