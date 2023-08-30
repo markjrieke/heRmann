@@ -10,7 +10,8 @@ Authors@R:
 Description: A collection of functions for reading and wrangling surveys, and 
              recodes.
 License: MIT + file LICENSE
-URL: https://github.com/markjrieke/heRmann
+URL: https://github.com/markjrieke/heRmann,
+    https://markjrieke.github.io/heRmann/
 BugReports: https://github.com/markjrieke/heRmann/issues
 Imports:
   askpass,

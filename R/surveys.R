@@ -218,7 +218,9 @@ fix_campus_names <- function(.data) {
 #' tibble from `fetch_surveys()` and removes duplicated responses from the
 #' Inpatient file, using the encounter ID (`"UNIQUE_ID"`) as the key.
 #'
-#' @inheritParams fix_survey_names
+#' @param .data a tibble. The column `survey_name` must be present and include 
+#'        responses from the Inpatient, Pedaitric Inpatient, and Inpatient Rehab
+#'        surveys.
 #'
 #' @export
 #'

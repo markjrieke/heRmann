@@ -1,0 +1,11 @@
+url: https://markjrieke.github.io/heRmann/
+template:
+  bootstrap: 5
+  bslib:
+    base_font: {google: "IBM Plex Sans"}
+    heading_font: {google: "DM Serif Display"}
+    code_font: {google: "IBM Plex Mono"}
+    bg: "#fdfdfd"
+    fg: "#363a3c"
+    primary: "#3579ac"
+
