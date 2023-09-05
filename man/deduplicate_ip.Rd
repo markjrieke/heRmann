@@ -7,8 +7,9 @@
 deduplicate_ip(.data)
 }
 \arguments{
-\item{.data}{A tibble. \code{fix_survey_names()} requires the column \code{survey_name}
-to be present. \code{fix_campus_names()} requires the column \code{campus} to be present.}
+\item{.data}{a tibble. The column \code{survey_name} must be present and include
+responses from the Inpatient, Pedaitric Inpatient, and Inpatient Rehab
+surveys.}
 }
 \description{
 Due to Qualtrics' HCAHPs sampling engine, Memorial Hermann's Inpatient survey

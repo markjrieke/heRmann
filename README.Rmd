@@ -34,4 +34,74 @@ devtools::install_github("markjrieke/heRmann")
 
 ## Usage
 
->put usage section here when you get a chance, dawg. Just create an example of nested IP/PIP/IPR data
+```{r, echo=FALSE}
+set.seed(123)
+inpatient <- 
+  tibble::tibble(UNIQUE_ID = c("12345", "23456", "34567", "45678", "56789", "67890"),
+                 campus = c("Children's Memorial Hermann Hospital", 
+                            rep("Memorial Hermann - Texas Medical Center", 5)),
+                 response = sample(c("Promoter", "Passive", "Detractor"),
+                                   size = 6,
+                                   replace = TRUE,
+                                   prob = c(0.75, 0.15, 0.1)))
+
+pedi_inpatient <- inpatient[1,]
+inpatient_rehab <- inpatient[2:3,]
+
+surveys <- 
+  dplyr::bind_cols(survey_name = c("Live - Inpatient",
+                                   "Live - Pediatric Inpatient",
+                                   "Live - Adult Inpatient Rehab"),
+                   responses = dplyr::bind_rows(inpatient |> tidyr::nest(responses = everything()),
+                                                pedi_inpatient |> tidyr::nest(responses = everything()),
+                                                inpatient_rehab |> tidyr::nest(responses = everything())))
+```
+
+A typical workflow involves extracting survey responses from Qualtrics and prepping for analysis. Below is an example using fake data for the Inpatient, Pediatric Inpatient, and Inpatient Rehab surveys. To import real responses, however, we can pass a vector of survey names as they appear in the Qualtrics UI to `fetch_surveys()`.
+
+```{r, eval=FALSE}
+library(heRmann)
+
+surveys <- 
+  c("Live - Inpatient",
+    "Live - Pediatric Inpatient",
+    "Live - Adult Inpatient Rehab") |>
+  fetch_surveys()
+
+surveys
+```
+
+```{r, echo=FALSE}
+library(heRmann)
+surveys
+```
+
+The survey names in the UI, however, are lengthy and annoying. Further, because of Qualtrics' HCAHPS sampling engine, the Inpatient survey contains duplicate responses from the Pediatric Inpatient and Inpatient Rehab surveys. `fix_survey_names()` and `deduplicate_ip()` address these issues, respectively.
+
+```{r}
+surveys <- 
+  surveys |>
+  fix_survey_names() |>
+  deduplicate_ip()
+
+surveys
+```
+
+Finally, unnesting reveals that the default recodes for campus are similarly lengthy and annoying. `fix_campus_names()` reformats to a more intuitive description:
+
+```{r}
+surveys <- 
+  surveys |>
+  tidyr::unnest(responses)
+
+surveys
+
+surveys |>
+  fix_campus_names()
+```
+
+
+
+
+
+
