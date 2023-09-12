@@ -72,7 +72,7 @@ fetch_surveys <- function(survey_names, ..., time_zone = "America/Chicago") {
     
   } else {
     
-    surveys <- dplyr::select(surveys, survey_name = .data$name, survey_id = id)
+    surveys <- dplyr::select(surveys, survey_name = "name", survey_id = id)
     surveys <- dplyr::mutate(surveys, responses = purrr::map(.data$survey_id, ~qualtRics::fetch_survey(.x, !!!dots, time_zone = time_zone)))
     
   }
