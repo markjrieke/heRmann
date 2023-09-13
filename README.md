@@ -7,6 +7,11 @@
 **License**:
 [MIT](https://github.com/markjrieke/heRmann/blob/main/LICENSE)
 
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/markjrieke/heRmann/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/markjrieke/heRmann/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
 ## Overview
 
 `{heRmann}` is a collection of functions for the Consumer Experience

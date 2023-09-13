@@ -20,6 +20,10 @@ knitr::opts_chunk$set(
 **Author**: [Mark Rieke](https://www.thedatadiary.net/about/about) <br/>
 **License**: [MIT](https://github.com/markjrieke/heRmann/blob/main/LICENSE)
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/markjrieke/heRmann/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/markjrieke/heRmann/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
 ## Overview
 
 `{heRmann}` is a collection of functions for the Consumer Experience Analytics (CXA) team at Memorial Hermann Health System. The package provides convenience functions for interacting with Qualtrics' API and performing common survey-specific data manipulation tasks.
