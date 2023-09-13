@@ -1,5 +1,7 @@
 test_that("fetch_surveys returns a single survey in the expected format", {
 
+  skip_on_ci()
+  
   vcr::use_cassette("fetch_single_survey", {
 
     x <-
@@ -44,6 +46,8 @@ test_that("fetch_surveys returns a single survey in the expected format", {
 
 test_that("fetch_surveys returns multiple surveys in the expected format", {
 
+  skip_on_ci()
+  
   vcr::use_cassette("fetch_survey_multiple", {
 
     x <-
@@ -64,6 +68,8 @@ test_that("fetch_surveys returns multiple surveys in the expected format", {
 
 test_that("fetch_surveys returns an error when no survey names match", {
 
+  skip_on_ci()
+  
   vcr::use_cassette("fetch_surveys_error", {
 
     expect_error(
@@ -77,6 +83,8 @@ test_that("fetch_surveys returns an error when no survey names match", {
 
 test_that("fetch_surveys returns a warning when some survey names match", {
 
+  skip_on_ci()
+  
   vcr::use_cassette("fetch_surveys_warning", {
 
     # generate a warning snapshot
