@@ -282,8 +282,8 @@ deduplicate_ip <- function(.data) {
   ipr <- dplyr::filter(surveys, .data$survey_name == "Inpatient Rehab")
   
   # unnest pip/ipr to be able to anti join later
-  pip <- tidyr::unnest(pip, .data$responses)
-  ipr <- tidyr::unnest(ipr, .data$responses)
+  pip <- tidyr::unnest(pip, "responses")
+  ipr <- tidyr::unnest(ipr, "responses")
   
   # remove pip/ipr records from ip
   ip <- nplyr::nest_anti_join(ip, .data$responses, pip, by = "UNIQUE_ID")
