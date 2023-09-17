@@ -1,4 +1,4 @@
-# heRmann 0.0.0.9000
+# heRmann 0.1.0
 
 A collection of functions for the Consumer Experience Analytics (CXA) team at Memorial Hermann Health System. Previously found in [riekelib](https://markjrieke.github.io/riekelib/). 
 
