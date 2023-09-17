@@ -16,7 +16,7 @@ corresponding to the given probabilities."><meta property="og:image" content="ht
     
     <a class="navbar-brand me-2" href="../index.html">heRmann</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -112,12 +112,12 @@ quantiles are computed.</p></dd>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># generate 10 nps scores based on a sample of 100 respondents</span></span></span>
 <span class="r-in"><span><span class="fu">rnps</span><span class="op">(</span><span class="fl">10</span>, <span class="fl">70</span>, <span class="fl">20</span>, <span class="fl">10</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 0.6962436 0.6713381 0.7168154 0.6200384 0.6912146 0.5506808 0.6260004</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [8] 0.5805159 0.6420829 0.6401431</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 0.5379283 0.5812230 0.7139716 0.6560151 0.6534987 0.5966048 0.6965998</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [8] 0.6680811 0.5694745 0.6420301</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># estimate the 95% nps quantile range of a sample of 100 respondents</span></span></span>
 <span class="r-in"><span><span class="fu">qnps</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.025</span>, <span class="fl">0.5</span>, <span class="fl">0.975</span><span class="op">)</span>, <span class="fl">70</span>, <span class="fl">20</span>, <span class="fl">10</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.4629269 0.6042619 0.7217654</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.4603321 0.6025419 0.7196458</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
