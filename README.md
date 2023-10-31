@@ -12,6 +12,11 @@
 [![R-CMD-check](https://github.com/markjrieke/heRmann/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/markjrieke/heRmann/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
+> Note: As of November 3rd, 2023, this project is no longer under active
+> maintenance. If you are a Memorial Hermann employee and would like to
+> take over as the maintainer, please [open an
+> issue](https://github.com/markjrieke/heRmann/issues/new).
+
 ## Overview
 
 `{heRmann}` is a collection of functions for the Consumer Experience
